@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D80BAF827B3FB8A000D8B9D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80BAF727B3FB8A000D8B9D /* LoginView.swift */; };
+		4DE91D5027B4B04600EDE69E /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */; };
 		4DF7851C27B2FA840010F8BC /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */; };
 		4DF7851E27B2FA840010F8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7851D27B2FA840010F8BC /* ContentView.swift */; };
 		4DF7852027B2FA880010F8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF7851F27B2FA880010F8BC /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		4D80BAF727B3FB8A000D8B9D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		4DF7851827B2FA840010F8BC /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		4DF7851D27B2FA840010F8BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Recipes;
 			sourceTree = "<group>";
 		};
+		4DE91D4E27B4AFFB00EDE69E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4DF7850F27B2FA840010F8BC = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		4DF7851A27B2FA840010F8BC /* SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4DE91D4E27B4AFFB00EDE69E /* Extension */,
 				4D80BAF627B3FB60000D8B9D /* Recipes */,
 				4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */,
 				4DF7851D27B2FA840010F8BC /* ContentView.swift */,
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D80BAF827B3FB8A000D8B9D /* LoginView.swift in Sources */,
+				4DE91D5027B4B04600EDE69E /* BindingExtensions.swift in Sources */,
 				4DF7851E27B2FA840010F8BC /* ContentView.swift in Sources */,
 				4DF7851C27B2FA840010F8BC /* SwiftUI_MVVMApp.swift in Sources */,
 			);
