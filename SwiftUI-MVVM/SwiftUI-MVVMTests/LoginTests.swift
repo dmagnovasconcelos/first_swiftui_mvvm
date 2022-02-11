@@ -5,8 +5,8 @@
 //  Created by Danilo Magno de Oliveira Vasconcelos on 09/02/22.
 //
 
-@testable import SwiftUI_MVVM
 import XCTest
+@testable import SwiftUI_MVVM
 
 class LoginTests: XCTestCase {
     private var viewModel: LoginViewModel! //Subject Under Test

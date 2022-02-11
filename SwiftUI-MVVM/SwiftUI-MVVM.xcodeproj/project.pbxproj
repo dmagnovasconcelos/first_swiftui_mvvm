@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D7F7F8B27B59D24005401B3 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F7F8A27B59D24005401B3 /* LoginTests.swift */; };
 		4D80BAF827B3FB8A000D8B9D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80BAF727B3FB8A000D8B9D /* LoginView.swift */; };
+		4DA27F9C27B5E9A300E85D9F /* AppViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27F9B27B5E9A300E85D9F /* AppViewModelTests.swift */; };
 		4DE91D5027B4B04600EDE69E /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */; };
 		4DF7851C27B2FA840010F8BC /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */; };
 		4DF7851E27B2FA840010F8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7851D27B2FA840010F8BC /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		4D7F7F8A27B59D24005401B3 /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		4D80BAF727B3FB8A000D8B9D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4DA27F9B27B5E9A300E85D9F /* AppViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModelTests.swift; sourceTree = "<group>"; };
 		4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		4DF7851827B2FA840010F8BC /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				4D7F7F8A27B59D24005401B3 /* LoginTests.swift */,
 				4DF7852C27B2FA890010F8BC /* SwiftUI_MVVMTests.swift */,
+				4DA27F9B27B5E9A300E85D9F /* AppViewModelTests.swift */,
 			);
 			path = "SwiftUI-MVVMTests";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				4D7F7F8B27B59D24005401B3 /* LoginTests.swift in Sources */,
 				4DF7852D27B2FA890010F8BC /* SwiftUI_MVVMTests.swift in Sources */,
+				4DA27F9C27B5E9A300E85D9F /* AppViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
