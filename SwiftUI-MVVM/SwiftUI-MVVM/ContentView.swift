@@ -24,8 +24,7 @@ struct ContentView: View {
                 .padding()
                 .onAppear(perform: model.loadData)
             
-            Text(model.state.isLoading ? "" : model.state.messageUser)
-                .onAppear(perform: model.loadData)
+           
                 
             
             Button(

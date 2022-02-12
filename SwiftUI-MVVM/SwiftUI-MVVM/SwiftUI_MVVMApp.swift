@@ -11,15 +11,7 @@ import SwiftUI
 struct SwiftUI_MVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                LoginView(
-                    model: .init(
-                        initialState: .init(),
-                        service: EmptyLoginservice(),
-                        loginDidSucceed: {}
-                    )
-                )
-            }
+            AppView(viewModel: .init(sessionService: FakeSessionService(user: nil)))
         }
     }
 }
