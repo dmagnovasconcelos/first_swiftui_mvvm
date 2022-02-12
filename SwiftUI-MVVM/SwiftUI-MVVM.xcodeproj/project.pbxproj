@@ -10,6 +10,11 @@
 		4D7F7F8B27B59D24005401B3 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F7F8A27B59D24005401B3 /* LoginTests.swift */; };
 		4D80BAF827B3FB8A000D8B9D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80BAF727B3FB8A000D8B9D /* LoginView.swift */; };
 		4DA27F9C27B5E9A300E85D9F /* AppViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27F9B27B5E9A300E85D9F /* AppViewModelTests.swift */; };
+		4DA27F9F27B69AD200E85D9F /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27F9E27B69AD200E85D9F /* SessionService.swift */; };
+		4DA27FA227B69B3800E85D9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27FA127B69B3800E85D9F /* User.swift */; };
+		4DA27FA527B69BDE00E85D9F /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27FA427B69BDE00E85D9F /* AppViewModel.swift */; };
+		4DA27FA727B69C4800E85D9F /* AppViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27FA627B69C4800E85D9F /* AppViewState.swift */; };
+		4DA27FA927B69C9100E85D9F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA27FA827B69C9100E85D9F /* AppView.swift */; };
 		4DE91D5027B4B04600EDE69E /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */; };
 		4DF7851C27B2FA840010F8BC /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */; };
 		4DF7851E27B2FA840010F8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7851D27B2FA840010F8BC /* ContentView.swift */; };
@@ -41,6 +46,11 @@
 		4D7F7F8A27B59D24005401B3 /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		4D80BAF727B3FB8A000D8B9D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4DA27F9B27B5E9A300E85D9F /* AppViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModelTests.swift; sourceTree = "<group>"; };
+		4DA27F9E27B69AD200E85D9F /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		4DA27FA127B69B3800E85D9F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4DA27FA427B69BDE00E85D9F /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		4DA27FA627B69C4800E85D9F /* AppViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewState.swift; sourceTree = "<group>"; };
+		4DA27FA827B69C9100E85D9F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		4DE91D4F27B4B04600EDE69E /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		4DF7851827B2FA840010F8BC /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
@@ -87,6 +97,32 @@
 			path = Recipes;
 			sourceTree = "<group>";
 		};
+		4DA27F9D27B69AB200E85D9F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4DA27F9E27B69AD200E85D9F /* SessionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4DA27FA027B69B1200E85D9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DA27FA127B69B3800E85D9F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DA27FA327B69BAB00E85D9F /* AppView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA27FA427B69BDE00E85D9F /* AppViewModel.swift */,
+				4DA27FA627B69C4800E85D9F /* AppViewState.swift */,
+				4DA27FA827B69C9100E85D9F /* AppView.swift */,
+			);
+			path = AppView;
+			sourceTree = "<group>";
+		};
 		4DE91D4E27B4AFFB00EDE69E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +154,9 @@
 		4DF7851A27B2FA840010F8BC /* SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4DA27FA327B69BAB00E85D9F /* AppView */,
+				4DA27FA027B69B1200E85D9F /* Models */,
+				4DA27F9D27B69AB200E85D9F /* Services */,
 				4DE91D4E27B4AFFB00EDE69E /* Extension */,
 				4D80BAF627B3FB60000D8B9D /* Recipes */,
 				4DF7851B27B2FA840010F8BC /* SwiftUI_MVVMApp.swift */,
@@ -287,6 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D80BAF827B3FB8A000D8B9D /* LoginView.swift in Sources */,
+				4DA27F9F27B69AD200E85D9F /* SessionService.swift in Sources */,
+				4DA27FA927B69C9100E85D9F /* AppView.swift in Sources */,
+				4DA27FA727B69C4800E85D9F /* AppViewState.swift in Sources */,
+				4DA27FA527B69BDE00E85D9F /* AppViewModel.swift in Sources */,
+				4DA27FA227B69B3800E85D9F /* User.swift in Sources */,
 				4DE91D5027B4B04600EDE69E /* BindingExtensions.swift in Sources */,
 				4DF7851E27B2FA840010F8BC /* ContentView.swift in Sources */,
 				4DF7851C27B2FA840010F8BC /* SwiftUI_MVVMApp.swift in Sources */,

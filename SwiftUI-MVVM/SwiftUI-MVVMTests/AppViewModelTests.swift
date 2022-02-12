@@ -1,51 +1,18 @@
-//
-//  AppViewModelTests.swift
-//  SwiftUI-MVVMTests
-//
-//  Created by Danilo Magno de Oliveira Vasconcelos on 10/02/22.
-//
-
 import XCTest
-@testable import SwiftUI_MVVM
-
-enum AppVeiwState {
-    case login
-    case loggedArea
-}
-
-struct User {}
-
 import Combine
-
-protocol SessionSercive : LoginService {
-    var user: User? { get }
-    var userPublisher: AnyPublisher<User?, Never> { get }
-    func logout()
-}
-
-final class AppViewModel {
-    @Published private(set) var state: AppVeiwState
-    private var userCancellable: AnyCancellable?
-    
-    init(sessionService: SessionSercive) {
-        state = sessionService.user == nil ? .login : .loggedArea
-        userCancellable = sessionService.userPublisher.sink { [weak self] user in
-            self?.state = user == nil ? .login : .loggedArea
-        }
-    }
-}
+@testable import SwiftUI_MVVM
 
 final class AppViewModelTests: XCTestCase {
     func test_whenUserIsLoggedIn_showLoggedArea() {
         let (sut, _) = makeSut(isLoggedIn: true)
         
-        XCTAssert(sut.state == .loggedArea)
+        XCTAssert(sut.state?.isLoggedArea == true)
     }
     
     func test_whenUserIsNotLoggedIn_showLogin() {
         let (sut, _) = makeSut(isLoggedIn: false)
         
-        XCTAssert(sut.state == .login)
+        XCTAssert(sut.state?.isLogin == true)
     }
     
     func test_whenUserLogsIn_showLoggedArea() {
@@ -53,7 +20,7 @@ final class AppViewModelTests: XCTestCase {
         
         service.login(email: "", password: "", completion: { _ in })
         
-        XCTAssert(sut.state == .loggedArea)
+        XCTAssert(sut.state?.isLoggedArea == true)
     }
     
     func test_whenUserLogsOut_showLogin() {
@@ -61,12 +28,14 @@ final class AppViewModelTests: XCTestCase {
         
         service.logout()
         
-        XCTAssert(sut.state == .login)
+        XCTAssert(sut.state?.isLogin == true )
     }
 }
 
+// MARK: HELPS
+
 private extension AppViewModelTests {
-    class StubSessionService: SessionSercive {
+    class StubSessionService: SessionService {
         private let userSubject: CurrentValueSubject<User?, Never>
         
         private(set) lazy var userPublisher = userSubject.eraseToAnyPublisher()
@@ -92,5 +61,17 @@ private extension AppViewModelTests {
     func makeSut(isLoggedIn: Bool) -> (AppViewModel, StubSessionService) {
         let sessionService = StubSessionService(user: isLoggedIn ? .init() : nil)
         return (AppViewModel(sessionService: sessionService), sessionService)
+    }
+}
+
+private extension AppVeiwState {
+    var isLogin: Bool {
+        guard case .login = self else { return false }
+        return true
+    }
+    
+    var isLoggedArea: Bool {
+        guard case .loggedArea = self else { return false }
+        return true
     }
 }

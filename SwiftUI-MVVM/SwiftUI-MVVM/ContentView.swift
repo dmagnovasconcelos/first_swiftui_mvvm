@@ -9,21 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var model: ContentViewModel
+    private let sessionService: SessionService
     
-    init(model: ContentViewModel) {
+    init(model: ContentViewModel, sessionService: SessionService) {
         self.model = model
+        self.sessionService = sessionService
     }
     
     var body: some View {
-        Text(model.state.isLoading ? "Loading..." : model.state.message)
-            .padding()
-            .onAppear(perform: model.loadData)
+        
+        
+        VStack {
+            Text(model.state.isLoading ? "Loading..." : model.state.message)
+                .padding()
+                .onAppear(perform: model.loadData)
+            
+            Text(model.state.isLoading ? "" : model.state.messageUser)
+                .onAppear(perform: model.loadData)
+                
+            
+            Button(
+                action: sessionService.logout,
+                label: {
+                    Text("Log out")
+                }
+            )
+        }
     }
 }
 
 struct ContenteViewState {
     var isLoading = false
     var message = ""
+    var messageUser = ""
 }
 
 class ContentViewModel: ObservableObject {
@@ -38,12 +56,16 @@ class ContentViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             self.state.isLoading = false
             self.state.message = "Hello, world!"
+            self.state.messageUser = "Welcome user"
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(model: .init())
+        ContentView(
+            model: .init(),
+            sessionService: FakeSessionService(user: .init())
+        )
     }
 }
